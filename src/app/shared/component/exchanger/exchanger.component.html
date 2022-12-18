@@ -1,1 +1,25 @@
-<p>exchanger works!</p>
+<div class="row">
+  <div class="column left" style="background-color:#aaa;">
+    <form [formGroup]="amountForm" novalidate>
+      <label for="amount">
+        Amount
+      </label>
+      <input
+        class="amount-input"
+        type="number"
+        id="amount"
+        formControlName="amount"
+      />
+    </form>
+    <app-rate #rateComponent></app-rate>
+  </div>
+  <div class="column right" style="background-color:#bbb;">
+    <app-from-to #fromToComponent></app-from-to>
+    <button>
+      Convert
+    </button>
+    <app-result #resultComponent></app-result>
+  </div>
+</div>
+
+

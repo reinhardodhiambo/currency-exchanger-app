@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CurrencyExchangerRoutingModule } from './currency-exchanger-routing.module';
+import {ExchangerModule} from "@shared/component/exchanger/exchanger.module";
+import {HomePageModule} from "@features/currency-exchanger/pages/home-page/home-page.module";
 
 
 
@@ -8,7 +10,9 @@ import { CurrencyExchangerRoutingModule } from './currency-exchanger-routing.mod
   declarations: [],
   imports: [
     CommonModule,
-    CurrencyExchangerRoutingModule
+   // HomePageModule,
+    CurrencyExchangerRoutingModule,
+    ExchangerModule
   ]
 })
 export class CurrencyExchangerModule { }

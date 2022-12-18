@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomePageComponent } from './home-page.component';
+import {ExchangerModule} from "@shared/component/exchanger/exchanger.module";
 
 
 
@@ -9,7 +10,8 @@ import { HomePageComponent } from './home-page.component';
     HomePageComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ExchangerModule,
   ]
 })
 export class HomePageModule { }

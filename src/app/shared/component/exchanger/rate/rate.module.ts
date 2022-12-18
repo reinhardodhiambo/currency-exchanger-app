@@ -5,11 +5,14 @@ import { RateComponent } from './rate.component';
 
 
 @NgModule({
-  declarations: [
-    RateComponent
-  ],
-  imports: [
-    CommonModule
-  ]
+    declarations: [
+        RateComponent
+    ],
+    exports: [
+        RateComponent
+    ],
+    imports: [
+        CommonModule
+    ]
 })
 export class RateModule { }

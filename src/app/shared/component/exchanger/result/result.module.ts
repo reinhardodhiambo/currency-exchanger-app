@@ -5,11 +5,14 @@ import { ResultComponent } from './result.component';
 
 
 @NgModule({
-  declarations: [
-    ResultComponent
-  ],
-  imports: [
-    CommonModule
-  ]
+    declarations: [
+        ResultComponent
+    ],
+    exports: [
+        ResultComponent
+    ],
+    imports: [
+        CommonModule
+    ]
 })
 export class ResultModule { }
