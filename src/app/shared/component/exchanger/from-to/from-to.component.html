@@ -1,1 +1,21 @@
-<p>from-to works!</p>
+<form [formGroup]="fromToForm" novalidate>
+  <div class="row">
+    <div class="select">
+      <label for="from" class="">From</label>
+      <div>
+        <select id="from" class="dropdown" formControlName="from">
+          <option *ngFor="let symbol of symbols" value="{{symbol}}">{{symbol.code}}</option>
+        </select>
+      </div>
+    </div>
+    <img class="swap-button"  alt="" src="assets/exchanger/swap_currency.png"/>
+    <div class="select">
+      <label for="to" class="">To</label>
+      <div>
+        <select id="to"  class="dropdown" formControlName="to">
+          <option *ngFor="let symbol of symbols" value="{{symbol}}">{{symbol.code}}</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</form>

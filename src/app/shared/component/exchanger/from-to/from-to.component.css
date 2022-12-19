@@ -1,0 +1,17 @@
+.row{
+  display: inline-flex;
+  width: 100%;
+}
+.swap-button{
+  background-image: url('~src/assets/exchanger/swap_currency.png');
+  width: 15%;
+  height: 40px;
+  margin: 5px;
+}
+
+.select{
+  width: 40%;
+}
+.dropdown{
+  width: 100%;
+}

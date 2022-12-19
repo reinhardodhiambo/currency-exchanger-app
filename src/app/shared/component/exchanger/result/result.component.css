@@ -1,0 +1,18 @@
+.result-container{
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+}
+.result{
+  border-style: solid;
+  text-align: center;
+  padding: 5px;
+  width: 100%;
+}
+.more-details-button{
+  width: 100%;
+  margin: 5px;
+  outline-color: unset;
+  color: white;
+  background: #1976d2;
+}
