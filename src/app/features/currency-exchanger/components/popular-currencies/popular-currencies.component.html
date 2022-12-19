@@ -1,1 +1,7 @@
-<p>popular-currencies works!</p>
+<div class="grid">
+  <div class="cell" *ngFor="let rate of rates">
+    <div class="rate">
+      {{rate.code}}: {{rate.amount}}
+    </div>
+  </div>
+</div>

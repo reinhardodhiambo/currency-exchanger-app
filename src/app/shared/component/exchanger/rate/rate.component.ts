@@ -5,18 +5,20 @@ import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core'
   templateUrl: './rate.component.html',
   styleUrls: ['./rate.component.css']
 })
-export class RateComponent implements OnChanges, OnInit{
-  @Input() rate: string = 'XX.XX';
-  @Input() from: string = 'EURO';
-  @Input() to: string = 'USD';
+export class RateComponent implements OnChanges, OnInit {
+  @Input() rate: any;
+
   rateString: string = ''
 
   ngOnChanges(changes: SimpleChanges): void {
-    this.rateString = `1.00 ${this.from} = ${this.rate} ${this.rate}`;
+    if(changes['rate']?.currentValue!==changes['rate']?.previousValue){
+      this.rateString = `1.00 ${this.rate?.from} = ${this.rate?.to} ${this.rate?.rate}`;
+    }
+
   }
 
   ngOnInit(): void {
-    this.rateString = `1.00 ${this.from} = ${this.rate} ${this.to}`;
+    this.rateString = `1.00 ${this.rate?.from||'EURO'} = ${this.rate?.to || 1} ${this.rate?.rate || 'USD'}`;
   }
 
 

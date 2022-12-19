@@ -11,14 +11,14 @@
         formControlName="amount"
       />
     </form>
-    <app-rate #rateComponent></app-rate>
+    <app-rate [rate]="rate" #rateComponent></app-rate>
   </div>
   <div class="column right" style="background-color:#bbb;">
     <app-from-to #fromToComponent></app-from-to>
-    <button class="convert-button" (click)="swap()">
+    <button class="convert-button" (click)="convert()">
       Convert
     </button>
-    <app-result #resultComponent></app-result>
+    <app-result [results]="result"  #resultComponent></app-result>
   </div>
 </div>
 

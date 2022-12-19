@@ -12,8 +12,8 @@ export class HttpService {
   public makeRequest(path: string, method: string, body?: any) {
     return this.httpClient.request(
       method,
-      `${environment.FIXER_API_KEY}${path}`,
-      { body }
+      `${environment.FIXER_API_BASE_URL}${path}`,
+      { params: body }
     );
   }
 }

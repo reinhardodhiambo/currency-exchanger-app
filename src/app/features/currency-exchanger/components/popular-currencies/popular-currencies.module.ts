@@ -8,6 +8,9 @@ import { PopularCurrenciesComponent } from './popular-currencies.component';
   declarations: [
     PopularCurrenciesComponent
   ],
+  exports: [
+    PopularCurrenciesComponent
+  ],
   imports: [
     CommonModule
   ]

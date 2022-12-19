@@ -8,6 +8,9 @@
   height: 40px;
   margin: 5px;
 }
+img:hover{
+  lighting-color: white;
+ }
 
 .select{
   width: 40%;

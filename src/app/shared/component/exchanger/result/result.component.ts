@@ -9,15 +9,19 @@ export class ResultComponent implements OnChanges{
   @Input() results = {
     from: "EUR",
     to:  "USD",
-    amount: "12.1"
+    result: "12.1"
   }
 
   @Input() detailed: boolean = true;
 
-  result: string = `${this.results.amount} ${this.results.to}`;
+  result: string = `${this.results.result} ${this.results.to}`;
 
   ngOnChanges(changes: SimpleChanges): void {
-    this.result = `${this.results.amount} ${this.results.to}`
+    if(changes['results']?.currentValue !== changes['results']?.previousValue){
+      console.log(this.results)
+      this.result = `${this.results.result} ${this.results.to}`
+    }
+
   }
 
 
