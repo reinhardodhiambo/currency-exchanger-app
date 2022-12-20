@@ -6,8 +6,8 @@ import {DetailPageComponent} from "./pages/detail-page/detail-page.component";
 
 
 const routes: Routes = [
-  { path: 'home', component: HomePageComponent },
-  { path: 'detail', component: DetailPageComponent }
+  { path: '', component: HomePageComponent },
+  { path: 'detail/:from/:to/:amount', component: DetailPageComponent }
 ];
 
 @NgModule({

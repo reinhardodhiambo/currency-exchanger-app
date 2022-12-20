@@ -5,11 +5,14 @@ import { HistoricalRatesComponent } from './historical-rates.component';
 
 
 @NgModule({
-  declarations: [
-    HistoricalRatesComponent
-  ],
-  imports: [
-    CommonModule
-  ]
+    declarations: [
+        HistoricalRatesComponent
+    ],
+    exports: [
+        HistoricalRatesComponent
+    ],
+    imports: [
+        CommonModule
+    ]
 })
 export class HistoricalRatesModule { }

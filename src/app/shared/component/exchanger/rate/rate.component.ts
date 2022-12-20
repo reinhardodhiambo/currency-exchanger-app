@@ -18,7 +18,7 @@ export class RateComponent implements OnChanges, OnInit {
   }
 
   ngOnInit(): void {
-    this.rateString = `1.00 ${this.rate?.from||'EURO'} = ${this.rate?.to || 1} ${this.rate?.rate || 'USD'}`;
+    this.rateString = `1.00 ${this.rate?.from||'EURO'} = ${this.rate?.to || 'XX'} ${this.rate?.rate || 'USD'}`;
   }
 
 

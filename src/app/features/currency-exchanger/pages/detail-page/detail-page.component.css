@@ -1,0 +1,14 @@
+:host(app-detail-page) {
+  width: inherit
+}
+.detail-toolbar {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+.back-button{
+  position: absolute;
+  right: 20px;
+  color: white;
+  background: #1976d2;
+}

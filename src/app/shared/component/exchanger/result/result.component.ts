@@ -1,27 +1,36 @@
 import {Component, Input, OnChanges, SimpleChanges} from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-result',
   templateUrl: './result.component.html',
   styleUrls: ['./result.component.css']
 })
-export class ResultComponent implements OnChanges{
+export class ResultComponent implements OnChanges {
   @Input() results = {
     from: "EUR",
-    to:  "USD",
-    result: "12.1"
+    to: "USD",
+    result: "XX",
+    amount: 1
   }
 
-  @Input() detailed: boolean = true;
+  constructor(private router: Router) {
+  }
+
+  @Input() detailed: boolean = false;
 
   result: string = `${this.results.result} ${this.results.to}`;
 
   ngOnChanges(changes: SimpleChanges): void {
-    if(changes['results']?.currentValue !== changes['results']?.previousValue){
+    if (changes['results']?.currentValue !== changes['results']?.previousValue) {
       console.log(this.results)
       this.result = `${this.results.result} ${this.results.to}`
     }
 
+  }
+
+  details() {
+    this.router.navigateByUrl(`detail/${this.results.from}/${this.results.to}/${this.results.amount}`)
   }
 
 

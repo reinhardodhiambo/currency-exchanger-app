@@ -27,7 +27,7 @@ export class ExchangerApiService {
   }
 
   getTimeSeries(data: any) {
-    return this.httpService.makeRequest('', 'GET', data);
+    return this.httpService.makeRequest('timeseries', 'GET', data);
   }
 
 

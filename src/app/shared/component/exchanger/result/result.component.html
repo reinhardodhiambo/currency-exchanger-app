@@ -2,7 +2,7 @@
   <div class="result">
     {{result}}
   </div>
-  <button *ngIf="!detailed" class="more-details-button">
+  <button *ngIf="!detailed" class="more-details-button" (click)="details()">
     More Details
   </button>
 </div>

@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   APP_VERSION: '1.0',
-  FIXER_API_KEY: 'u0I4ZYC3CCxlKx4cZcelomrRi8sMqahm',
+  FIXER_API_KEY: 'yQsHxQhsnzXwGHoH7Ov0JNGG1s60ynzv',
   FIXER_API_BASE_URL: 'https://api.apilayer.com/fixer/',
 };
 

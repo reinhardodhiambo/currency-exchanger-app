@@ -1,3 +1,4 @@
+
 <div class="row">
   <div class="column left" style="background-color:#aaa;">
     <form [formGroup]="amountForm" novalidate>
@@ -14,12 +15,16 @@
     <app-rate [rate]="rate" #rateComponent></app-rate>
   </div>
   <div class="column right" style="background-color:#bbb;">
-    <app-from-to #fromToComponent></app-from-to>
+    <app-from-to [from]="from" [to]="to" #fromToComponent></app-from-to>
     <button class="convert-button" (click)="convert()">
       Convert
     </button>
-    <app-result [results]="result"  #resultComponent></app-result>
+    <app-result [detailed]="detailed" [results]="result"  #resultComponent></app-result>
   </div>
 </div>
+<div *ngIf="processing" id="overlay">
+  <div class="loader"></div>
+</div>
+
 
 
